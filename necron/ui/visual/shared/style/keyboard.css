@@ -1,0 +1,43 @@
+.keyboardBase{
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background: #414757;
+}
+
+.simple-keyboard.hg-layout-default .hg-button.hg-red {
+    background: rgb(255, 0, 0, 0.7);
+    color: white;
+}
+
+.simple-keyboard.hg-layout-ru .hg-button.hg-red {
+    background: rgb(255, 0, 0, 0.7);
+    color: white;
+}
+
+.simple-keyboard.epKeyboardThemeMain.epKeyboardTheme {
+    border: 5px solid rgb(87, 114, 187);
+    border-radius: 10px 10px 0px 0px;
+    /* margin: 10px; */
+    width: -webkit-fill-available;
+    background-color: #84c6ff;
+}
+
+.simple-keyboard.epKeyboardThemeMain {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.simple-keyboard.epKeyboardThemeMain .hg-button {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}

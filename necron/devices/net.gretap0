@@ -1,0 +1,9 @@
+{
+"desc":"gretap",
+"dev":"virtual",
+"type":"gretap",
+"opts":{},
+"interface":"net",
+"id":"gretap",
+"def_param":{}
+}

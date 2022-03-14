@@ -1,0 +1,75 @@
+#reactBaseScreenMain{
+
+/* width: 240px; */
+
+display: flex;
+
+flex-direction: row;
+
+overflow: hidden;
+}
+
+.reactBaseScreenLeft{width: 240px;position: absolute;height: 100vh;
+    box-shadow: 1px 1px 6px 0px #161515;
+    z-index: 3;/* border-right-style: solid; *//* border-color: black; */
+}
+.reactBaseScreenLContent{display: flex;flex-direction: column;}
+.reactBaseScreenRight{margin-left: 240px;display: flex;flex-direction: column;position: fixed;height: 100vh;width: calc(100% - 240px);/* border-left-style: solid; *//* border-color: #cbcbcb; *//* border-width: 1px; *//* overflow: auto; *//* right: 0px; *//* margin-right: 100px; */}
+
+.reactBaseScreenRContent{/* display: flex; *//* flex-direction: row; *//* white-space: nowrap; *//* overflow-x: scroll; *//* white-space: nowrap; *//* display: inline; */}
+
+.reactBaseScreenHeader{width: calc(100% - 100px);/* right: 0px; *//* position: fixed; */flex: 0 0 auto;/* width: max-content; */}
+
+.reactBaseScreenFooter{width: auto!important;/* right: 0px; *//* position: fixed; */f: 0 0 auto;flex: 0 0 auto;bottom: 0;}
+
+.reactBaseScreenNavi{
+    padding-top: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 5px; */
+    /* flex: 1 1 auto; */
+    overflow: auto;
+    max-height: calc(100vh - 68px);
+}
+.reactBaseScreenMain{
+    flex: 1 1 auto;
+    overflow: auto;
+    display: inline-block;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* -webkit-flex-grow: 1; */
+    -ms-flex-positive: 1;
+    /* flex-grow: 1; */
+    /* flex-shrink: 0; */
+    z-index: 1;
+}
+
+.reactBaseScreenShowNaviMenu{
+    height: 38px;
+    width: 38px;
+    background-position: center;
+    background-size: 38px;
+    background-repeat: no-repeat;
+    background-image: url(../../../../ui/visual/res/menuV1.svg);
+}
+.reactBaseScreenShowNavi{
+    /* display: block; */
+    /* position: absolute; */
+    height: 38px;
+    width: 38px;
+    border: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 56px;
+    font-family: Helvetica,Arial,sans-serif;
+    margin: 8px 12px;
+    top: 0;
+    left: 0;
+    /* color: #fff; */
+    z-index: 1;
+}

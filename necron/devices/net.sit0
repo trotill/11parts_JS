@@ -1,0 +1,9 @@
+{
+"desc":"sit",
+"dev":"virtual",
+"type":"sit",
+"opts":{},
+"interface":"net",
+"id":"sit",
+"def_param":{}
+}

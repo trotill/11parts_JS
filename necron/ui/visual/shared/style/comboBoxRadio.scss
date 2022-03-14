@@ -1,0 +1,63 @@
+$defaultColor:#000000 !default;
+$selectColor:#000000 !default;
+$fontSizeInput:17px !default;
+$valueColor:$defaultColor!default;
+$nameColor:$defaultColor!default;
+
+.comboboxRadioPlus {
+    background: url(../../res/add.png) #7681a000 no-repeat 98%;
+}
+
+.comboboxRadioName{
+    color: $nameColor;
+    font-size: $fontSizeInput;
+    cursor: default;
+}
+.comboboxRadioMain{
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.comboboxRadioText{
+    text-align: left;
+    color: $valueColor;
+    font-size: $fontSizeInput;
+    width: 100%;
+    flex-grow: 1;
+}
+.comboboxRadioPlus{
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.radioDialogItemMain{
+    border-style: none;
+    padding: 5px;
+}
+
+.radioDialogItemMainSelect{
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.radioDialogItemChild{
+    width: max-content;
+    padding-right: 5px;
+    border-radius: 5px 5px 0 0px;
+    color: $defaultColor;
+    font-size: $fontSizeInput;
+}
+
+.radioDialogItemChildSelect{
+    width: max-content;
+    padding-right: 5px;
+    border-radius: 5px 5px 0 0px;
+    color: $selectColor;
+    font-size: $fontSizeInput;
+}

@@ -1,0 +1,9 @@
+{
+"desc":"bond",
+"dev":"virtual",
+"type":"bond",
+"opts":{},
+"interface":"net",
+"id":"bond",
+"def_param":{}
+}

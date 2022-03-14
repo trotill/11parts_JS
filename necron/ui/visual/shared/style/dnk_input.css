@@ -1,0 +1,211 @@
+.dnk-inputfield_main{
+    display: flex;
+    flex-direction: column;
+}
+
+.dnk-inputfield_input {
+    border-radius: 5px;
+    border-width: 0px;
+    padding: 5px;
+    background-color: #0000002b;
+    color: #ffffffd4;
+    font-size: 14pt;
+    width: max-content;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.dnk-inputfield_input_main{
+    display: flex;
+}
+.dnk-inputfield_inputSelValComboBaseMain{
+    color: black;
+}
+.dnk-inputfield_main_changed{
+    background-color: #565450!important;
+}
+.dnk-inputfield_mainSelValComboBaseOverlay{
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: #b8bfce59;
+}
+.dnk_global_input_edit{
+    /* cursor: pointer; */
+    pointer-events: auto!important;
+    border-width: 2px;
+    border-style: none solid none none;
+    border-color: #752f32;
+}
+
+.dnk-inputlabel {
+    font-size: 14pt;
+    margin: 10px 0px 10px 10px;
+    min-height: 20px;
+    /* color: #ffffffd4;*/
+}
+
+.dnk-inputfield_input_wrapper{
+    display: flex;
+}
+/*InputField*/
+.dnk-inputfield_input_rm{
+    cursor: pointer;
+    pointer-events: auto!important;
+    background-image: url(../../res/rm_form_2b.png);
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.dnk-inputfield_input_rm:hover{
+    background-image: url(../../res/rm_form_2w.png);
+}
+
+.dnk-inputfield_input_add{
+    cursor: pointer;
+    pointer-events: auto!important;
+    background-image: url(../../res/plus.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    /* min-height: 10px; */
+    /* height: 25px; */
+    margin: 8px 3px 8px auto;
+}
+
+.dnk-inputfield_input_add:hover{
+    background-image: url(../../res/plus_w.png);
+}
+/*InputField*/
+/*Slider*/
+.dnk-inputslider_input_add{
+    cursor: pointer;
+    pointer-events: auto!important;
+    background-image: url(../../res/plus.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    /* height: 25px; */
+    margin: 8px 3px 8px auto;
+}
+
+.dnk-inputslider_input_add:hover{
+    background-image: url(../../res/plus_w.png);
+}
+
+.dnk-inputslider_input_rm:hover{
+    background-image: url(../../res/rm_form_2w.png);
+}
+
+
+.dnk-inputslider_input_rm{
+    cursor: pointer;
+    pointer-events: auto!important;
+    background-image: url(../../res/rm_form_2b.png);
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+/*Slider*/
+
+/*Button array in table over input*/
+.dnk_inputbutton_global_input {
+    /* pointer-events: none; */
+}
+
+.dnk-inputbutton_input_wrapper{
+    display: flex;
+}
+.dnk-inputbutton_input:hover {
+    background-color: #28442a;
+    cursor: pointer;
+    color: #bfbfbf;
+}
+.dnk-inputbutton_input:active {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+.dnk-inputbutton_input {
+    border-radius: 5px;
+    border-width: 0px;
+    padding: 5px;
+    background-color: #1f3120;
+    color: #ffffffd4;
+    font-size: 14pt;
+    width: 100px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    box-shadow: 2px 1px 4px 2px rgb(89, 92, 93);
+}
+
+.dnk-inputbutton_input_add{
+    cursor: pointer;
+    pointer-events: auto!important;
+    background-image: url(../../res/plus.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    /* height: 25px; */
+    margin: 8px 3px 8px auto;
+}
+
+.dnk-inputbutton_input_add:hover{
+    background-image: url(../../res/plus_w.png);
+}
+
+.dnk-inputbutton_input_rm:hover{
+    background-image: url(../../res/rm_form_2w.png);
+}
+
+
+.dnk-inputbutton_input_rm{
+    cursor: pointer;
+    pointer-events: auto!important;
+    background-image: url(../../res/rm_form_2b.png);
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.inputSelValComboBaseMain{
+    /* FONT-VARIANT: JIS04; */
+    /* height: 100px; */
+    min-width: 200px;
+    background: white;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 20px;
+    /* right: 0px; */
+    /* top: 20px; */
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0);
+    /* z-index: 1000; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.inputSelValComboBaseItem:hover{
+    background-color: #5772bb4d;
+    font-size: 20px;
+}
+.inputSelValComboBaseItem{
+
+padding: 5px;
+
+border-bottom-style: solid;
+
+border-width: 1px;
+
+border-color: #b9bcbf;
+
+font-size: 18px;
+
+z-index: 2;
+}
+/*Button array in table over input*/

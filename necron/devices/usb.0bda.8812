@@ -1,0 +1,8 @@
+{
+"desc":"Realtek rtl8812au",
+"dev":"rtl8812au",
+"type":"wlan",
+"opts":["ap","bridge","host"],
+"def_param":{}
+}
+

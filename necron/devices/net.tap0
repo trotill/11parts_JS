@@ -1,0 +1,9 @@
+{
+"desc":"VPN TAP interface 0",
+"dev":"virtual",
+"type":"tap",
+"opts":{},
+"interface":"net",
+"id":"tap",
+"def_param":{}
+}

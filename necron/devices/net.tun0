@@ -1,0 +1,9 @@
+{
+"desc":"VPN TUN interface 0",
+"dev":"virtual",
+"type":"tun",
+"opts":{},
+"interface":"net",
+"id":"tun",
+"def_param":{}
+}

@@ -1,0 +1,9 @@
+{
+"desc":"gre",
+"dev":"virtual",
+"type":"gre",
+"opts":{},
+"interface":"net",
+"id":"gre",
+"def_param":{}
+}

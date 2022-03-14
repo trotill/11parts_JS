@@ -1,0 +1,43 @@
+.tab_main_table {
+    /* width: 100%; */
+    /* border-style: solid; */
+    border-width: 2px;
+    border-color: #676b6c;
+    /* border-top-style: none; */
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 1px 4px 2px rgb(89, 92, 93);
+    margin: 20px 10px;
+}
+
+.tab_item_table {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.tab_bar_table {
+    display: flex;
+    justify-content: center;
+    background-color: #3e3e3f;
+    /* margin: 20px 4px 0px 10px; */
+    border-radius: 5px 5px 0 0;
+    padding: 0 5px 0 5px;
+    /* box-shadow: 2px 1px 4px 2px rgb(89, 92, 93); */
+}
+
+.tab_region_table {
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+.dnk_main_global_col_end_changed {
+    background-color: #5a5a5a;
+}
+
+.dnk_main_global_col_start_changed {
+    background-color: #5a5a5a;
+}
+
+.dnk_main_global_col_mid_narrow_changed {
+    background-color: #5a5a5a!important;
+}

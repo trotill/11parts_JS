@@ -1,0 +1,19 @@
+.dnk-panel_main {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-size: calc(11px + 1vw);
+    background-color: #cdd2d5;
+    /* padding: 10px; */
+}
+
+.dnk-panel_child{
+    height: 75px;
+    background-color: #424244;
+    border-radius: 5px;
+    display: flex;
+    /* top: 50%; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

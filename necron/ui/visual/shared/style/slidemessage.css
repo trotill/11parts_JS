@@ -1,0 +1,16 @@
+.slide_message {
+    z-index: 1001;
+    border: 1px;
+    color: #3d3b3d;
+    border-color: #000000;
+    background-color: #ffffff;
+    font-family: monospace;
+    font-size: 100%;
+    width: 50%;
+    left: 25%;
+
+    padding: 15px 15px 40px 15px;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 3px 2px 3px 8px rgba(0, 0, 0, 0.33);
+    position: absolute;
+}

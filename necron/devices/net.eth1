@@ -1,0 +1,9 @@
+{
+"desc":"Ethernet",
+"dev":"virtual",
+"type":"eth",
+"opts":{},
+"interface":"net",
+"id":"eth",
+"def_param":{}
+}

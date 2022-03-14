@@ -1,0 +1,31 @@
+.ImageStateMain{
+    display: flex;
+    flex-direction: column;
+    /* height: 100px; */
+    /* background-color: antiquewhite; */
+    justify-content: center;
+    align-items: center;
+}
+
+.ImageStateMainInfo{
+
+}
+
+.ImageStateMainImg{
+    height: 60px;
+    width: 60px;
+    background-repeat: no-repeat;
+    /* position: absolute; */
+    background-size: cover;
+}
+
+.ImageStateExampleOn{
+    background: url(../../res/plusInCircle.svg) #7681a000 no-repeat 98%;
+    width: 40px;
+}
+
+.ImageStateExampleOff{
+    background: url(../../res/minusInCircle.svg) #7681a000 no-repeat 98%;
+    background-size: contain;
+    width: 40px;
+}

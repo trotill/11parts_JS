@@ -1,0 +1,9 @@
+{
+"desc":"localhost",
+"dev":"virtual",
+"type":"lo",
+"opts":{},
+"interface":"net",
+"id":"lo",
+"def_param":{}
+}

@@ -1,0 +1,8 @@
+{
+"desc":"Dlink rtl8192eu",
+"dev":"rtl8192eu",
+"type":"wlan",
+"opts":["ap","bridge","host"],
+"def_param":{}
+}
+

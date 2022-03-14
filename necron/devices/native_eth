@@ -1,0 +1,10 @@
+{
+"desc":"Ethernet 1Gb RGMII",
+"dev":"imx",
+"type":"eth",
+"opts":{},
+"interface":"rgmii",
+"id":"native_eth",
+"def_param":{}
+}
+

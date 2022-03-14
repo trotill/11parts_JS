@@ -1,0 +1,15 @@
+{
+"desc":"ZTE ME3630(NDIS)",
+"dev":"",
+"type":"gsm",
+"opts":{
+    "def_mode":"MBIM",
+    "switch_mode":["ATI","AT+ZSWITCH=8","AT+ZRST"],
+     "modes":{
+            "MBIM":{}
+        }
+},
+"def_param":{},
+"interface_opts":{"data":1,"control":2}
+}
+  

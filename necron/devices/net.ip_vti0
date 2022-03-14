@@ -1,0 +1,9 @@
+{
+"desc":"ip_vti",
+"dev":"virtual",
+"type":"ip_vti",
+"opts":{},
+"interface":"net",
+"id":"ip_vti",
+"def_param":{}
+}

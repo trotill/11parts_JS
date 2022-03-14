@@ -1,0 +1,101 @@
+function WizCreateNavi({ PastTo, Id, Obj }: createElement): any {
+	alert('WizCreateNavi need refact');
+
+	while (false) {
+		const div = PastController(PastTo, Obj, Id, 'wiz-navi_block');
+
+		$('<span/>', {
+			class: 'wiz-navi_block_info',
+			html: Obj['name']
+		}).appendTo($(div));
+
+		const but_bar = $('<div/>', {
+			class: 'wiz-navi_block_button_bar'
+		}).appendTo($(div));
+
+		const button_class =
+			'wiz-navi_block_button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect';
+		for (let n = 0; n < Obj.mbutt.length; n++) {
+			if (global.logoutEn === false && Obj.mbutt[n] === 'logout') continue;
+
+			const but = $('<button/>', {
+				class: button_class,
+				id: Obj.mbutt[n],
+				html: t(Obj.nbutt[n])
+			}).appendTo($(but_bar));
+
+			but.click(function () {
+				const event = new Event(this.id);
+				global.api.storagesEng.detActionsOnUI();
+				document.dispatchEvent(event);
+			});
+		}
+	}
+}
+
+function WizCreateNaviCheckbox({ PastTo, Id, Obj }: createElement): any {
+	alert('WizCreateNaviCheckbox need refact');
+	while (false) {
+		const div = PastController(PastTo, Obj, Id, 'wiz-navi_block');
+
+		$('<span/>', {
+			class: 'wiz-navi_block_info',
+			html: Obj['name'],
+			id: Id + 'sp'
+		}).appendTo($(div));
+
+		const but_bar = $('<div/>', {
+			class: 'wiz-navi_block_button_bar',
+			style: 'display:unset;',
+			id: Id + 'dv'
+		}).appendTo($(div));
+
+		for (let n = 0; n < Obj.mbutt.length; n++) {
+			buildComponent('restBr', { PastTo: `#${Id}dv`, id: 'b' + Obj.mbutt[n], arr: undefined });
+			const lab = $('<label/>', {
+				class: 'mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect',
+				for: Obj.mbutt[n]
+			}).appendTo($(but_bar));
+
+			// debugger;
+			const rd = $('<input/>', {
+				type: 'checkbox',
+				id: Obj.mbutt[n],
+				class: 'mdl-checkbox__input',
+				name: Obj.mbutt[n],
+				value: 0
+			}).appendTo($(lab));
+
+			$('<span/>', {
+				class: 'mdl-checkbox__label',
+				html: t(Obj.nbutt[n]),
+				id: Id + 'sp1'
+			}).appendTo($(lab));
+
+			rd.click(function () {
+				// alert('test');
+				//debugger;
+				const event = new Event(this.id);
+				global.api.storagesEng.detActionsOnUI();
+				document.dispatchEvent(event);
+			});
+		}
+	}
+}
+
+function WizInfo({ PastTo, Id, Obj }: createElement): any {
+	alert('WizInfo need refact');
+	while (false) {
+		const div = PastController(PastTo, Obj, Id, 'wiz-info_block');
+
+		$('<div/>', {
+			class: 'wiz-info_block_header',
+			html: t('Wizard')
+		}).appendTo(div);
+
+		$('<div/>', {
+			class: 'wiz-info_block_content',
+			html: Obj['name']
+		}).appendTo(div);
+	}
+}

@@ -1,0 +1,9 @@
+{
+"desc":"VPN L2TP interface",
+"dev":"virtual",
+"type":"l2tp",
+"opts":{},
+"interface":"net",
+"id":"ppp",
+"def_param":{}
+}

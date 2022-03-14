@@ -1,0 +1,183 @@
+const { rmBackPath } = require('./configUtil.js');
+
+const CACHE_PATH = '/var/run';
+const ROOT_PATH = '/www/pages/necron';
+const BUS_PORT_SEND_CSRV = 10099;
+const BUS_PORT_SEND = 11100;
+const BUS_PORT_WEBUI_TO_CNODA = 12100;
+const BUS_PORT_RCV = 11200;
+const BUS_PORT_SEND_WDT = 11300;
+const BUS_PORT_RCV_WDT = 11400;
+const PAGE_PREFIX = '11p';
+const BUS_IP = '127.0.0.1';
+const GROUP_ADDR = '239.100.100.1';
+const DEBUG_IFACE = ''; //"eth0"
+
+const DEBUG = 1;
+const DEBUG_BE = 1;
+
+const PROTO_VERS = 1;
+
+const JSON_PACK_TYPE_SET_SYSTEM = 1;
+const JSON_PACK_TYPE_TO_JNODA = 2;
+const JSON_PACK_TYPE_FROM_CNODA = 3;
+const JSON_PACK_TYPE_GET_SYSTEM = 4;
+
+const JSON_PACK_TYPE_REQ_SYS_INFO = 5;
+const JSON_PACK_TYPE_RESP_SYS_INFO = 6;
+const JSON_PACK_TYPE_TEST_DATA_EXIST = 7;
+const JSON_PACK_TYPE_RESP_DATA_NOT_EXIST = 8;
+const JSON_PACK_TYPE_REQ_EVENT = 9;
+const JSON_PACK_TYPE_INIT_ME = 10;
+const JSON_PACK_TYPE_WD_RESTART = 11;
+const JSON_PACK_TYPE_SEND_EVENT = 12;
+
+const JSON_PACK_TYPE_TO_UI = 15;
+const JSON_PACK_TYPE_TO_WEB_SRV = 16;
+const JSON_PACK_TYPE_TO_CNODA = 17;
+
+const SVCLOG_PARAM_PATH = CACHE_PATH + '/svclog';
+//const SVCLOG_FIFO_PATH = CACHE_PATH + '/slogger';
+const CACHE_PATH_WEB = rmBackPath(CACHE_PATH + '/cache');
+const CACHE_PATH_ELJ = CACHE_PATH + '/electron';
+const CACHE_PATH_NEC = CACHE_PATH + '/necron';
+
+const FW_PATH = ROOT_PATH;
+//const LOG_PATH = ROOT_PATH + '/../log';
+const LOG_SERVICES_PATH = 'var/log';
+const bb_path = './web/be/bobase';
+
+const JNODA_LOG_FILE = SVCLOG_PARAM_PATH + '/jnoda_log.cfg';
+const WEB_SRV_LOG_FILE = SVCLOG_PARAM_PATH + '/srv_log.cfg';
+
+const LOG_FOLDERS = [JNODA_LOG_FILE, LOG_SERVICES_PATH];
+
+const DEVID_CACHE_PATH = rmBackPath(CACHE_PATH + '/devid');
+const BUILDOBJ_CACHE_PATH = rmBackPath(CACHE_PATH + '/buildObj');
+const BUILDOBJ_PATH = rmBackPath(FW_PATH + '/buildObj');
+const DEVICES_PATH = rmBackPath(FW_PATH + '/devices');
+const PRJ_DEV_PATH = rmBackPath(BUILDOBJ_PATH + '/devices');
+
+const DOWNLOAD_PATH = rmBackPath(ROOT_PATH + '/../download');
+const SHARED_PATH = rmBackPath(ROOT_PATH + '/../shared');
+const GSMX_DATA_PATH = rmBackPath(DEVICES_PATH + '/gsmx');
+const JNODA_PATH = rmBackPath(FW_PATH + '/Jnoda');
+const SRVIOT_JS_PATH = JNODA_PATH + '/Jnoda.js';
+
+const CNODA_PATH = FW_PATH + '/Cnoda';
+const CNODA_CFG_PATH = CNODA_PATH + '/Cnoda.json';
+
+const SETTINGS_STOR = [
+	rmBackPath(ROOT_PATH + '/../sys/'),
+	rmBackPath(ROOT_PATH + '/../sys_ex/'),
+	rmBackPath('/etc/necron/')
+];
+const GSETTINGS_STOR = SETTINGS_STOR[0];
+const DEFSETTINGS_STOR = SETTINGS_STOR[2];
+const PAGE_REGS_CACHE_MAP = '.map.json';
+const PAGE_REGS_USER_MAP = BUILDOBJ_PATH + '/menu.js';
+const ERROR = 1;
+const NO_ERROR = 0;
+
+const CHECK_IP_DEFAULT = '8.8.8.8';
+const DISABLED_NAT_RULES = 0;
+const CHK_INTERNET_TIME_MS = 5000;
+const CHK_LINK_TIME_MS = 3000;
+
+const WLAN_IFACES = ['wlan0', 'wlan1'];
+const WLAN_TABLE_OFFS = 20;
+
+const LAN_MODE_STATIC = 'stip';
+
+const HOSTAPD_CONF = 'hostapd.conf';
+const HOSTAPD_IFACE = 'wlan0';
+const BRIDGE_NAME = 'br0';
+const DNSMASK_LEASES_LOG = CACHE_PATH + '/dnsmasq.leases';
+const IPTABLES = '/usr/sbin/iptables';
+const PPPD_PATH = '/usr/sbin/pppd';
+const GSM_DETECT_SCRIPT = DEVICES_PATH + '/gsm_detect.sh';
+const UDHCPC_CONFIG = FW_PATH + '/Jnoda/app/base/udhcpc.conf';
+const DHCPCD_CONFIG = FW_PATH + '/Jnoda/app/base/11p_dhcpcd_hook.sh';
+const UDHCPC_DEBUG_CONFIG = FW_PATH + '/Jnoda/app/base/udhcpc_debug.conf';
+
+module.exports = {
+	CACHE_PATH,
+	ROOT_PATH,
+	BUS_PORT_SEND_CSRV,
+	BUS_PORT_SEND,
+	BUS_PORT_WEBUI_TO_CNODA,
+	BUS_PORT_RCV,
+	BUS_PORT_SEND_WDT,
+	BUS_PORT_RCV_WDT,
+	BUS_IP,
+	GROUP_ADDR,
+	DEBUG_IFACE, //"eth0"
+	DEBUG,
+	DEBUG_BE,
+	PROTO_VERS,
+	JSON_PACK_TYPE_SET_SYSTEM,
+	JSON_PACK_TYPE_TO_JNODA,
+	JSON_PACK_TYPE_FROM_CNODA,
+	JSON_PACK_TYPE_GET_SYSTEM,
+	JSON_PACK_TYPE_REQ_SYS_INFO,
+	JSON_PACK_TYPE_RESP_SYS_INFO,
+	JSON_PACK_TYPE_TEST_DATA_EXIST,
+	JSON_PACK_TYPE_RESP_DATA_NOT_EXIST,
+	JSON_PACK_TYPE_REQ_EVENT,
+	JSON_PACK_TYPE_INIT_ME,
+	JSON_PACK_TYPE_WD_RESTART,
+	JSON_PACK_TYPE_SEND_EVENT,
+	JSON_PACK_TYPE_TO_UI,
+	JSON_PACK_TYPE_TO_WEB_SRV,
+	JSON_PACK_TYPE_TO_CNODA,
+
+	SVCLOG_PARAM_PATH,
+	CACHE_PATH_WEB,
+	CACHE_PATH_ELJ,
+	CACHE_PATH_NEC,
+	FW_PATH,
+	LOG_SERVICES_PATH,
+	bb_path,
+	JNODA_LOG_FILE,
+	WEB_SRV_LOG_FILE,
+	LOG_FOLDERS,
+	DEVID_CACHE_PATH,
+	BUILDOBJ_CACHE_PATH,
+	BUILDOBJ_PATH,
+	DEVICES_PATH,
+	PRJ_DEV_PATH,
+	DOWNLOAD_PATH,
+	SHARED_PATH,
+	GSMX_DATA_PATH,
+	JNODA_PATH,
+	SRVIOT_JS_PATH,
+	CNODA_PATH,
+	CNODA_CFG_PATH,
+	SETTINGS_STOR,
+	GSETTINGS_STOR,
+	DEFSETTINGS_STOR,
+	PAGE_REGS_CACHE_MAP,
+	PAGE_REGS_USER_MAP,
+	ERROR,
+	NO_ERROR,
+	CHECK_IP_DEFAULT,
+	DISABLED_NAT_RULES,
+	CHK_INTERNET_TIME_MS,
+	CHK_LINK_TIME_MS,
+
+	WLAN_IFACES,
+	WLAN_TABLE_OFFS,
+	LAN_MODE_STATIC,
+
+	HOSTAPD_CONF,
+	HOSTAPD_IFACE,
+	BRIDGE_NAME,
+	DNSMASK_LEASES_LOG,
+	IPTABLES,
+	PPPD_PATH,
+	GSM_DETECT_SCRIPT,
+	UDHCPC_CONFIG,
+	DHCPCD_CONFIG,
+	UDHCPC_DEBUG_CONFIG,
+	PAGE_PREFIX
+};

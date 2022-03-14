@@ -1,0 +1,82 @@
+.XFL_error_input_sym
+{
+    color:red;
+}
+.XFL_error_input
+{
+    color:red;
+}
+.XFL_error_input_minmax
+{
+    color:red;
+}
+.XFL_error_input_len{
+    color: #008000;
+}
+
+.XFL_msgbox {
+    /* display: block; */
+    position: fixed;
+    z-index: 2;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: inherit;
+    /* overflow: auto; */
+    /* background-color: rgb(0,0,0); */
+    /* background-color: rgba(0,0,0,0.4); */
+}
+
+.XFL_errpix:hover {
+    background-image: url(../../../../ui/visual/res/err_on.png);
+}
+
+.XFL_errpix {
+    /* display: block; */
+    /* position: absolute; */
+    /* padding: 0px; */
+    /* left: 305px; */
+    /* top: 22px; */
+    /* float: right; */
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    /* margin: 5px; */
+    background-repeat: no-repeat;
+    /* background-size: 70%; */
+    background-image: url(../../../../ui/visual/res/err_off.png);
+    /* overflow: auto; */
+    /* background-color: rgb(0,0,0); */
+    position: relative;
+    /* background-color: rgba(0,0,0,0.4); */
+}
+
+/* Modal Content */
+.XFL_modal-content {
+    /* background-color: #ffffff; */
+    /* margin: auto; */
+    /* color: #4a4a4a; */
+    /* border-radius: 15px 15px 15px 15px; */
+    /* max-width: 300px; */
+    /* overflow-x: auto; */
+    /* overflow-y: auto; */
+    /* top: -10px; */
+    /* left: 340px; */
+    /* width: 300px; */
+    /* float: right; */
+    position: relative;
+    z-index: 1;
+    /* box-shadow: 0px 0px 0px 1px rgba(38,38,38,0.65); */
+}
+
+.XFL_modal-dialog-content {
+    padding: 10px 10px 10px;
+    /* color: rgba(255, 255, 255, 0.77); */
+    position: absolute;
+    /* height: 100%; */
+    box-shadow: 0px 0px 0px 1px rgba(38,38,38,0.65);
+    border-radius: 15px 15px 15px 15px;
+    width: 300px;
+    background-color: white;
+    /* margin-top: -10px; */
+}

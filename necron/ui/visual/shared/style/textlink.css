@@ -1,0 +1,21 @@
+.objTextLinkBase{
+    font-size:13pt;
+    font-family: 'Roboto',  sans-serif;
+    padding-right:10px;
+}
+
+.objTextLinkDiscript{
+//color: rgb(18, 24, 30);
+
+    text-align: right;
+}
+
+.objTextLinkValue{
+//color: rgb(29, 42, 25);
+    display:inline;
+    line-height:normal;
+    letter-spacing:normal;
+    font-weight:100;
+//font-size:11pt;
+
+}

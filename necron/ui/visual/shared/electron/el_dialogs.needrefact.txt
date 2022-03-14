@@ -1,0 +1,237 @@
+import { u, t } from '../../../engine/_core';
+
+export class ElFileDialog {
+	constructor(options, resolve) {
+		let defOptions = {
+			baseDir: '/www',
+			selectDir: false,
+			saveFileMode: false,
+			saveFileDef: 'myfile.ko',
+			debug: true
+		};
+
+		// let baseDir=options.baseDir;
+		// let selectDir=false;//false sel only file, true only dir
+		//let saveFileMode=true;
+		//let saveFileDef="myfile.ko";
+		//let debug=true;
+
+		let mainBlock = $('<div/>', {
+			class: 'showOpenDialogSync_mainBlock'
+		}).appendTo('.' + global.TAG_MAIN);
+
+		let pathBlock = $('<div/>', {
+			class: 'showOpenDialogSync_path'
+		}).appendTo(mainBlock);
+
+		function showOpenDialogSync_drag(event) {
+			var target = event.target,
+				// keep the dragged position in the data-x/data-y attributes
+				x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+				y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+			// translate the element
+			target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+
+			// update the posiion attributes
+			target.setAttribute('data-x', x);
+			target.setAttribute('data-y', y);
+		}
+
+		interact('.showOpenDialogSync_mainBlock').draggable({
+			// enable inertial throwing
+			inertia: true,
+			// call this function on every dragmove eventFromUI
+			onmove: showOpenDialogSync_drag
+		});
+
+		let viewBlock = $('<div/>', {
+			class: 'showOpenDialogSync_viewBlock'
+		}).appendTo(mainBlock);
+
+		let dirStack = [];
+		let resultPath = '';
+		let saveFileInput = undefined;
+		let resultDir = '';
+
+		let calcResultPath = () => {
+			if (options.saveFileMode) {
+				if (saveFileInput !== undefined) resultPath = resultDir + saveFileInput.val();
+				else resultPath = resultDir + options.saveFileDef;
+			} else {
+				resultPath = resultDir;
+			}
+			pathBlock.html(resultPath);
+		};
+
+		let doSelect = (baseDir) => {
+			if (baseDir === '..') {
+				dirStack.pop();
+			} else dirStack.push(baseDir);
+
+			resultDir = '';
+
+			dirStack.find((elem) => {
+				resultDir += elem + '/';
+			});
+
+			if (resultDir.length > 1) {
+				//если два подряд слеша, то один удаляем, иначе в win некорректно работает
+				if (resultDir[1] === '/') resultDir = resultDir.substring(1);
+			}
+
+			calcResultPath();
+			//console.log('select file', n);
+
+			$('.showOpenDialogSync_listBlock').remove();
+			let listBlock = $('<div/>', {
+				class: 'showOpenDialogSync_listBlock'
+			}).appendTo(viewBlock);
+
+			let dirs = [];
+			let links = [];
+			let files = [];
+			let rdResult = [];
+			if (!fs.existsSync(resultDir)) {
+				//alert(`Dir ${resultDir} not found, dev error`);
+				if (runMode === 'desktop') {
+					if (fs.existsSync('/')) {
+						options.baseDir = baseDir = resultDir = '/';
+						dirStack.pop();
+						dirStack.push(baseDir);
+						calcResultPath();
+					} else {
+						if (fs.existsSync('C:\\')) {
+							options.baseDir = baseDir = resultDir = 'C:\\';
+							dirStack.pop();
+							dirStack.push(baseDir);
+							calcResultPath();
+						} else {
+							alert(`Dir ${resultDir} not found, dev error for desktop`);
+							return;
+						}
+					}
+				} else {
+					alert(`Dir ${resultDir} not found, dev error for embedded`);
+					return;
+				}
+			}
+			if (!options.debug) {
+				rdResult = fs.readdirSync(resultDir, { withFileTypes: true });
+				console.log('rdResult', rdResult);
+				rdResult.find((e) => {
+					if (e.isFile()) files.push(e.name);
+					if (e.isSymbolicLink()) links.push(e.name);
+					if (e.isDirectory()) dirs.push(e.name);
+				});
+			} else {
+				for (let n = 0; n < 1000; n++) {
+					files.push('file' + n + '.txt');
+				}
+				for (let n = 0; n < 10; n++) {
+					dirs.push('dir' + n);
+				}
+			}
+
+			let filesBlock = [];
+			let dirBlock = [];
+			if (dirStack.length > 1) {
+				let toBack = $('<div/>', {
+					class: 'showOpenDialogSync_viewDir',
+					html: '..'
+				}).appendTo(listBlock);
+				toBack.click(() => {
+					doSelect('..');
+				});
+			}
+
+			for (let n = 0; n < dirs.length; n++) {
+				dirBlock[n] = $('<div/>', {
+					class: 'showOpenDialogSync_viewDir',
+					html: dirs[n]
+				}).appendTo(listBlock);
+
+				dirBlock[n].click(() => {
+					for (let z = 0; z < filesBlock.length; z++)
+						filesBlock[z].removeClass('showOpenDialogSync_selFile');
+
+					for (let z = 0; z < dirBlock.length; z++)
+						dirBlock[z].removeClass('showOpenDialogSync_selDir');
+
+					dirBlock[n].addClass('showOpenDialogSync_selDir');
+					doSelect(dirs[n]);
+					console.log('select dir', n);
+				});
+			}
+
+			if (!options.selectDir) {
+				for (let n = 0; n < files.length; n++) {
+					filesBlock[n] = $('<div/>', {
+						class: 'showOpenDialogSync_viewFile',
+						html: files[n]
+					}).appendTo(listBlock);
+
+					filesBlock[n].click(() => {
+						for (let z = 0; z < filesBlock.length; z++)
+							filesBlock[z].removeClass('showOpenDialogSync_selFile');
+
+						for (let z = 0; z < dirBlock.length; z++)
+							dirBlock[z].removeClass('showOpenDialogSync_selDir');
+
+						filesBlock[n].addClass('showOpenDialogSync_selFile');
+						resultPath = resultDir + files[n];
+						pathBlock.html(resultPath);
+						if (options.saveFileMode) {
+							saveFileInput.val(files[n]);
+						}
+						console.log('select file', n);
+					});
+				}
+			}
+		};
+
+		doSelect(options.baseDir);
+		//saveFileDef
+		if (options.saveFileMode) {
+			saveFileInput = $('<input/>', {
+				class: 'showOpenDialogSync_saveFile',
+				id: 'elDialog',
+				value: options.saveFileDef
+			}).appendTo(mainBlock);
+			resultPath = options.baseDir + '/' + options.saveFileDef;
+			pathBlock.html(resultPath);
+			let inputEvent = () => {
+				resultPath = resultDir + saveFileInput.val();
+				pathBlock.html(resultPath);
+			};
+			saveFileInput.on('input', () => {
+				// console.log('fname',comp);
+
+				inputEvent();
+			});
+		}
+
+		let bottonGroup = $('<div/>', {
+			class: 'showOpenDialogSync_buttonGrp'
+		}).appendTo(mainBlock);
+
+		let buttonOk = $('<div/>', {
+			class: 'showOpenDialogSync_buttonOk',
+			html: t('selFileDir')
+		}).appendTo(bottonGroup);
+
+		buttonOk.click(() => {
+			mainBlock.remove();
+			resolve([resultPath]);
+		});
+
+		let buttonClose = $('<div/>', {
+			class: 'showOpenDialogSync_buttonClose',
+			html: t('cancel')
+		}).appendTo(bottonGroup);
+
+		buttonClose.click(() => {
+			mainBlock.remove();
+		});
+	}
+}

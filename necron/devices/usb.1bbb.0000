@@ -1,0 +1,35 @@
+{
+"desc":"Alcatel Svyaznoy",
+"dev":"",
+"type":"gsm",
+"opts":{
+    "def_mode":"RAS",
+    "modes":{
+            "all":{
+               "settings":{
+                   "atic":"AT^NDISDUP=1,1,\"{{apn}}\"\\r\\n"
+                }
+            },
+            "RAS":{
+                "settings":{
+                    "dnum":"*99***1#",
+                    "conscr":["ABORT           'BUSY'",
+                               "ABORT           'NO ANSWER'",
+                               "ABORT           'NO CARRIER'",
+                               "ABORT           'NO DIALTONE'",
+                               "''              'AT+ZOPRT=5'",
+                               "''              'AT+ZSTART'",
+                               "''              'AT+CFUN=1'",
+                               "''              'AT+CPBS=\"SM\"'",
+                               "''              'AT+CPMS=\"SM\",\"SM\",\"\"'",
+                               "SAY             'Enter APN'",
+                               "OK              'AT+CGDCONT=1,\"IP\",\"{{apn}}\"'",
+                               "OK              'ATDT{{dnum}}'",
+                               "CONNECT         ''"]
+                } 
+            }
+        }
+   },
+"def_param":{},
+"interface_opts":{"data":2,"control":2}
+}

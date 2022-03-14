@@ -1,0 +1,9 @@
+{
+"desc":"tunl",
+"dev":"virtual",
+"type":"tunl",
+"opts":{},
+"interface":"net",
+"id":"tunl",
+"def_param":{}
+}

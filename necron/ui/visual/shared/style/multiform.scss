@@ -1,0 +1,95 @@
+$colorCtrl:#eaeaea;
+$defaultColor:#000000 !default;
+$valueColor2:#000000!default;
+
+.multiformRowData{
+    display: flex;
+}
+
+.multiformRowMain{
+    flex-grow: 100;
+}
+
+.multiformRowDMain{
+    display: flex;
+}
+
+.multiformHeaderMain{
+    display: flex;
+    font-size: 17px;
+}
+
+.multiformHeaderColItem{
+
+}
+
+.multiformHeaderColBlock{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: $colorCtrl;
+}
+
+.tableDescItem{
+
+}
+.multiformDescItem{
+
+}
+.tableWrapper{
+    border-style: solid;
+    border-color: $colorCtrl;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.multiformWrapper{
+
+}
+.tableDesc{
+    background-color: $defaultColor;
+    font-size: 16px;
+    color:$valueColor2;
+    border-radius: 3px 3px 0px 0px;
+    padding: 0 5px 0 5px;
+}
+.multiformDesc{
+
+}
+.tableHeaderColBlock{
+    width: 100%;
+    align-items: center;
+    background-color: $colorCtrl;
+}
+
+.tableMain{
+    width: 100%;
+}
+
+$multiformEditSize:36px;
+.multiformHeader{
+
+    height: $multiformEditSize;
+    background-repeat: no-repeat;
+    background-size: $multiformEditSize - 6;
+    background-position: center;
+    cursor: pointer;
+    background-color: $colorCtrl;
+}
+
+.multiformHeaderAdd{
+    @extend .multiformHeader;
+    width: $multiformEditSize + 3;
+    background-image: url(../../../../ui/visual/res/add.svg);
+}
+
+.multiformHeaderRmMain{
+    align-items: center;
+    display: flex;
+    background-color: $colorCtrl;
+}
+.multiformHeaderRm{
+    @extend .multiformHeader;
+    width: $multiformEditSize;
+    background-image: url(../../../../ui/visual/res/minusInSquare.svg);
+}

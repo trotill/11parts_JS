@@ -1,0 +1,64 @@
+$LogHeight:100%!default;
+
+.LogField {
+    color: #fffffff0;
+    background-color: #414757;
+    overflow: auto;
+    border-style: solid;
+    border-color: #424243;
+    font-size: 14px;
+    padding: 10px 0px 0px 20px;
+    user-select: text;
+    word-wrap:break-word;
+    height:$LogHeight
+}
+.LogField_main {
+    font-size: 18px;
+    margin: 10px 0px 4px 0px;
+    /* border-style: outset; */
+    /* border-radius: 5px 5px 5px 5px; */
+    /*white-space: nowrap;*/
+    border-color: #424243;
+    /* border-width: 2px; */
+    background-color: #424243;
+}
+
+.LogField_info {
+    padding: 5px 5px 5px 20px;
+    color: #ffffff;
+    display:flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+
+.LogField_info_head {
+
+}
+
+.LogField_info_comp {
+    flex-basis: 100%;
+    width: auto;
+    height: auto;
+    margin: 0px 5px;
+}
+
+.LogFieldParityEven{
+ background-color: #00000066;
+}
+.LogFieldParityOdd{
+    background-color: #414757
+}
+.LogField_info_scroll {
+    width: 20px;
+    height: auto;
+    background-color: #b6b9bb;
+    justify-content: right;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+}
+
+.LogField_info_scroll:hover {
+    background-color: white;
+}

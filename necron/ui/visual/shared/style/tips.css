@@ -1,0 +1,31 @@
+.tips_main{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+font-size: 18px;
+margin-bottom: 10px;
+border-style: solid none none solid;
+border-radius: 5px 0px 0px 0px;
+padding-left: 3px;
+border-width: 1px;
+border-color: #3e3f43;
+}
+
+.tips_block_tips{
+/* margin-bottom: 10px; */
+flex-grow: 2;
+/* padding-top: 1px; */
+/* white-space: nowrap; */
+min-width: 10;
+}
+
+.tips_block_name{
+/* font-style: italic; */
+font-weight: bold;
+/* font-size: 20px; */
+color: #e6ecff;
+white-space: nowrap;
+padding-right: 5px;
+/* flex-grow: 1; */
+width: min-content;
+}

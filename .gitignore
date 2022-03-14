@@ -1,0 +1,8 @@
+sys/
+package-lock.json
+node_modules
+necron/dist/
+necron/Projects/
+necron/compiled/
+necron/yarn.lock
+necron/coverage/

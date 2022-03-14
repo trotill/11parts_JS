@@ -1,0 +1,93 @@
+.showOpenDialogSync_mainBlock{
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 20%;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #414757;
+    min-width: 300px;
+    background-color: #414757;
+    box-shadow: 0px 0px 12px 11px rgba(0,0,0,0.33);
+    /* min-height: 300px; */
+    /* display: flex; */
+}
+
+.showOpenDialogSync_selFile{
+    /* background-color: #a9bffd!important; */
+    /* color: black!important; */
+    font-size: large;
+    color: white!important;
+}
+
+.showOpenDialogSync_listBlock{border-radius: 5px;margin: 5;padding: 5px;background-color: #5e5e63;}
+.showOpenDialogSync_path{/* height: 40px; */background-color: #5e5e63;padding: 5px;color: #e4e4e4;max-width: 350px;overflow: auto;}
+.showOpenDialogSync_selDir{
+    background-color: #177700 !important;
+}
+
+.showOpenDialogSync_viewBlock{
+    min-height: 200px;
+    background-color: #424244;
+    z-index: 1000;/* position: absolute; */
+    top: 50%;
+    left: 50%;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    max-height: 600px;
+    overflow: auto;
+    max-width: 500px;
+    white-space: nowrap;
+}
+
+.showOpenDialogSync_viewDir:active {/* background-color: #a9bffd; */}
+.showOpenDialogSync_viewDir:hover {
+    /* background-color: #3c3c3c; */
+    cursor: pointer;
+    font-size: large;
+    color: white;
+}
+
+.showOpenDialogSync_saveFile{width: 300px;/* padding: 10px; */margin: 0px 9px 0px;border-radius: 3px;border-style: solid;border-width: 1px;font-size: 20px;}
+.showOpenDialogSync_viewDir{
+    background-color: #5e5e63;
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: #a9bffd;
+    font-weight: bold;
+    color: #dadada;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 5px 5px 0px;
+    /* border-radius: 5px; */
+    /* left: 5px; */
+    /* transform-origin: left; */
+}
+
+.showOpenDialogSync_viewFile:active {/* background-color: #a9bffd; */}
+.showOpenDialogSync_viewFile:hover {background-color: #5e81e2;cursor: pointer;}
+.showOpenDialogSync_viewFile{border-style: none none solid none;color: #dadada;/* padding: 5px 5px 0 0; *//* left: 5px; *//* transform-origin: left; */margin: 5px 5px 5px 5px;border-width: 1px;}
+
+.showOpenDialogSync_buttonOk{min-width: 10px;height: 20px;/* width: 80px; */background-color: #5772bb;padding: 5px;margin: 5px;font-size: 20px;border-radius: 3px;flex-grow: 1;}
+.showOpenDialogSync_buttonOk:hover{
+    cursor: pointer;
+    background-color: #6e85cd
+}
+.showOpenDialogSync_buttonOk:active{
+    /* flex-grow: 2; */
+}
+
+.showOpenDialogSync_buttonClose{min-width: 40px;height: 20px;background-color: #424244;padding: 5px;margin: 5px;border-radius: 3px;font-size: 20px;flex-grow: 1;}
+.showOpenDialogSync_buttonClose:hover{
+    cursor: pointer;
+    background-color: #59595b
+}
+
+.showOpenDialogSync_buttonGrp{
+    display: flex;
+    padding: 0px 5px 5px 5px;
+    color: white;
+    /* bottom: 0px; */
+}
+

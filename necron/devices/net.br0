@@ -1,0 +1,9 @@
+{
+"desc":"bridge",
+"dev":"virtual",
+"type":"br",
+"opts":[],
+"interface":"net",
+"id":"br",
+"def_param":{}
+}

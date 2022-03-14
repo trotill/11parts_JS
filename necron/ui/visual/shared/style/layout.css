@@ -1,0 +1,24 @@
+.plainlayout {
+    /* width: 100%; */
+    /* height: max-content; */
+    /* right: 0px; */
+    /* padding: 0px; */
+    /* margin: 0px; */
+    /* top: 0px; */
+    /* left: 0px; */
+    /* position: absolute; */
+    /* background-color: #9b9c9c; */
+    display:flex;
+    flex-direction: column;
+    /* min-height: 100%; */
+    /* z-index: 1; */
+}
+
+.plainlayout_div_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.plainlayout_div_col {
+    border-style: solid;
+}

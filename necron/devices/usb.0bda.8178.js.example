@@ -1,0 +1,63 @@
+
+function Build(dev)
+{
+    var res = [
+    {
+        type: 'delim',
+        value: 'Overlapped WiFi extra',
+    }, {
+        type: 'br',
+    }, {
+        type: 'br',
+    }, {
+        name: 'SSID',
+        type: 'tfield',
+        id: 'wSsid',
+        isDig: false,
+        value: '',
+        errMsg: 'incorrect symbol'
+    }, {
+        type: 'br',
+    }, {
+        name: 'Password',
+        type: 'tfield',
+        id: 'wPasswd',
+        isDig: false,
+        value: '',
+        min: 8,
+        max: 63,
+        errMsg: 'incorrect symbol'
+    }, {
+        type: 'br',
+    }, {
+        name: 'Secure type',
+        type: 'sbox',
+        value: 'WPAe',
+        id: 'wSec',
+        tabidx: 1,
+        items_name:  [
+            "WPA enterprise","WPA personal","No secure",
+        ],
+        items_val:  [
+            "WPAe","WPA","NO",
+        ],
+    },{
+            type: 'br',
+    }, {
+            name: 'Dev',
+            type: 'efield',
+            id: 'dev',
+            isDig: false,
+            value: JSON.stringify(dev),
+            rows: '10',
+            errMsg: 'incorrect symbol',
+        },
+    ];
+
+    return res;
+}
+
+
+module.exports = {
+    Build:Build,
+}

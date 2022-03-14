@@ -1,0 +1,27 @@
+.displayLockOverlay{
+    z-index: 1000;
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000057;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.displayLockPinForm{
+    background-color: white;
+    /* width: 400px; */
+    /* height: 300px; */
+    border-radius: 5px;
+    padding: 20px;
+}
+.displayLockPinEdit{
+    font-size: 80px;
+    max-width: 500px;
+    border-style: none;
+    background-color: #e4ffd0;
+    text-align: center;
+}

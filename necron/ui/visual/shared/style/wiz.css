@@ -1,0 +1,68 @@
+.wizlogic_block{
+    /* min-height: 200px; */
+    position: relative;
+}
+
+.wiz-info_block{
+    /* margin-top: 50px; */
+    margin-top: -15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    /* border-style: solid; */
+    /* border-radius: 5px; */
+    /* padding: 20px; */
+    border-color: #626269;
+    background-color: #626269;
+    color: white;
+}
+
+.wiz-info_block_header {
+    font-size: 28px;
+    padding: 10px;
+    text-align: center;
+    /* height: 20px; */
+    background-color: #5772bb;
+}
+.wiz-info_block_content{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.wiz-navi_block{
+
+    /* margin-top: 50px; */
+    margin: -15px;
+    /* border-style: solid; */
+    /* border-radius: 5px; */
+    padding: 20px;
+    /* border-color: #5772bb; */
+
+}
+.wiz-navi_block_button_bar{
+    display: flex;
+    margin-top: 10px;
+}
+.wiz-navi_block_button{
+    min-width: 20%;
+    margin-right: 15px;
+    background-color: #414757;
+    color: white;
+    flex: auto;
+}
+.wiz-navi_block_info{
+    font-size: 24px;
+}
+
+.naviclass_wizard {
+    font-variant: small-caps;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #b0c5ff;
+    /* border-style: solid; */
+    /* background: #424243; */
+}

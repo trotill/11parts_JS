@@ -1,0 +1,10 @@
+{
+"desc":"RNDIS USB Ethernet",
+"dev":"virtual",
+"type":"eth",
+"opts":{},
+"interface":"net",
+"id":"usb",
+"name":"usb0",
+"def_param":{}
+}

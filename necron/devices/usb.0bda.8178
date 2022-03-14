@@ -1,0 +1,8 @@
+{
+"desc":"Realtek rtl8192cu",
+"dev":"rtl8192cu",
+"type":"wlan",
+"opts":["ap","bridge","host"],
+"def_param":{}
+}
+

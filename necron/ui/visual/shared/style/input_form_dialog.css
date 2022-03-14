@@ -1,0 +1,36 @@
+.input_form:hover {
+    cursor: pointer;
+    color: #3f51b5;
+}
+
+.input_form_dialog {
+    top: 20%;
+    left: 40%;
+    overflow: auto;
+    max-height: 60%;
+    max-width: 60%;
+    /* width: 20%; */
+    /* min-height: 20%; */
+    /* min-width: 20%; */
+    padding: 15px;
+    position: absolute;
+    background-color: #efefef;
+    z-index: 1;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: -20px 19px 16px 1px rgba(29, 22, 22, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.button_form_dialog {
+background-color: #20232d;
+border-style: none;
+font-size: 20px;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+padding: 5px;
+margin-top: 5px;
+/* z-index: 101; */
+box-shadow: 1px 1px 3px 0px rgb(0 0 0 / 33%);
+}

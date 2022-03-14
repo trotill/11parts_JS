@@ -1,0 +1,120 @@
+.tab_main{
+    /* width: 100%; */
+    background-color: #676b6c;
+}
+
+
+.tab_item {
+    /* border-right-style: solid; */
+    border-top-style: solid;
+    border-right-style: solid;
+    border-width: 1px;
+    border-right-width: 2px;
+    /* margin: 10px 10px 10px 10px; */
+    background-color: #414757;
+    color: #ffffff91;
+    border-radius: 0px 10px 0px 0px;
+    border-color: #383b3c;
+    padding-right: 2px;
+    /* margin-right: 2px; */
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+    color: rgb(255, 255, 255);
+    background-color: #0f1e2566;
+}
+
+.tab_item_but {
+    /*border-style: solid; */
+    /* border-color: black; */
+    border-width: 2px;
+    /* margin: 10px 10px 10px 10px; */
+    background-color: #41475757;
+    color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 4px 0px rgb(0, 0, 0);
+    margin: 5px 10px 5px 10px;
+    padding: 5px;
+    flex-grow: 1;
+}
+
+.tab_bar_but {
+    background-color: #adadad;
+    /* -webkit-justify-content: left; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    /* margin-bottom: 30px; */
+    /* border-radius: 10px; */
+    border-color: #414757;
+    border-width: 1px;
+    /* border-style: solid; */
+    /* margin: 20px; */
+    border-radius: 10px;
+}
+
+.tab_main_basic {
+    display: flex;
+    flex-direction: column;
+    /* border-top-style: solid;
+    border-color: #989694;*/
+    /* z-index: 1; */
+    /* position: fixed; */
+    /* bottom: 0px; */
+    width: 100%;
+}
+
+.tab_bar_basic {
+
+}
+.tab_bar {
+    -webkit-justify-content: left;
+    justify-content: left;
+    padding-bottom: 10px;
+}
+
+.tab_region_basic {
+    left: 10px;
+    padding: 0px 10px 10px 10px;
+    background-color: #676b6c;
+    /* background-color: #00000021; */
+    /* border-radius: 10px; */
+}
+
+.tab_item_basic:hover{
+    background-color: rgba(244, 243, 239, 0.8);
+
+}
+
+.tab_is_active {
+    background-color: #676b6c;
+   /* box-shadow: inset 0px 0px 4px 2px rgb(89, 92, 93);*/
+}
+
+.tab_is_active_but {
+    background-color: #53a262;
+    /* box-shadow: inset 0px 0px 4px 2px rgb(89, 92, 93); */
+}
+
+.tab_item_basic{
+    padding: 0 15px;
+    float: left;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,.54);
+    overflow: hidden;
+    color: #ffffffc9;
+    cursor: pointer;
+    user-select: none;
+}

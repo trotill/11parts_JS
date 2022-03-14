@@ -1,0 +1,9 @@
+{
+"desc":"dummy",
+"dev":"virtual",
+"type":"dummy",
+"opts":{},
+"interface":"net",
+"id":"dummy",
+"def_param":{}
+}

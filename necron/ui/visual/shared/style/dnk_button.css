@@ -1,0 +1,24 @@
+.dnk-button_main{
+    display: flex;
+    flex-direction: column;
+    font-size: 14pt;
+}
+
+.dnk-button_input:hover{
+    background-color: #bfc0c1;
+}
+.dnk-button_input{
+    height: 75px;
+    background-color: #818282;
+    border-radius: 5px;
+    display: flex;
+    /* top: 50%; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dnk-bitton_input_is_active:hover{
+    background-color: #4e4e4e;
+}

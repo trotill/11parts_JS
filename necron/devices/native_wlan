@@ -1,0 +1,9 @@
+{
+"desc":"WiFi",
+"dev":"native-wifi",
+"type":"wlan",
+"id":"native_wlan",
+"opts":["ap","bridge","host"],
+"def_param":{}
+}
+

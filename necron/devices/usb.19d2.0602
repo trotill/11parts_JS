@@ -1,0 +1,13 @@
+{
+"desc":"ZTE ME3630(MBIM)",
+"dev":"",
+"type":"gsm",
+"opts":{
+    "def_mode":"MBIM",
+    "modes":{
+        "MBIM":{}
+    }
+},
+"def_param":{},
+"interface_opts":{"data":1,"control":2}
+}

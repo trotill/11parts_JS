@@ -1,0 +1,10 @@
+{
+"desc":"Ethernet 100Mbit RMII",
+"dev":"imx",
+"type":"eth",
+"opts":{},
+"interface":"rmii",
+"id":"native_eth100",
+"def_param":{}
+}
+

@@ -1,0 +1,9 @@
+{
+"desc":"Ethernet 1Gb",
+"dev":"virtual",
+"type":"eth",
+"opts":{},
+"interface":"net",
+"id":"netcard_gb_eth0",
+"def_param":{}
+}
