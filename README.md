@@ -4,7 +4,7 @@ Framework 11-parts (eleven parts) for the development of complexes and devices b
 
 The repository consists of a backend and a frontend.
 
-The assembly instructions for the project are not ready, the source codes are presented for informational purposes only. In addition to the instructions, a start-up project is also required, it is not here either, it is not ready.
+The build instructions for the project are not ready, the source codes are presented for informational purposes only. In addition to the instructions, a start-up project is also required, it is not here either, it is not ready.
 
 If you are interested in the project please contact me at:
 - e-mail: info@11-parts.com
